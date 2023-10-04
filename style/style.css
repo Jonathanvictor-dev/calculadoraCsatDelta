@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --font-principal: 'Poppins', sans-serif;
+
+    --cor-verde: #35d703;
+    --cor-vermelho: #FA3A09;
+    --cor-amarela: #F9F221;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-principal)
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    background-color: #18181b;
+    margin: 0 auto !important; 
+}
+
+#container {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 3.5rem;
+    min-width: 60%;
+    height: 80vh;
+}
+
+#termometro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #3f3f46;
+    font-weight: 600;
+    margin-right: 6rem;
+    padding: 2rem;
+    width: 40%;
+    border-bottom: 1px solid #3f3f46;
+    border-left: 1px solid #3f3f46;
+    border-radius: 0.5rem;
+}
+
+#termometro-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#termometro-texto {
+    text-align: left;
+    color: #f8fafc;
+    font-size: 1rem;
+}
+
+.termometro-valor-esconder {
+    display: none;
+}
+
+#termometro-valor, #termometro-valor-visivel {
+    font-size: 8rem;
+    text-align: center;
+}
+
+#calculadora {
+    display: flex;
+    flex-direction: column;
+    color: #f8fafc;
+    padding: 2rem;
+    background-color: #242427;
+    border-radius: 0.5rem;
+    width: 60%;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+}   
+
+.calculadora-avaliacoes {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0.3rem;
+    border-radius: 0.4rem;
+    background-color: #3f3f46;
+}
+
+.calculadora-avaliacoes span, 
+.calculadora-avaliacoes i {
+    color: #f8fafc;
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+}
+
+.calculadora-avaliacoes input {
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    color: #f8fafc;
+    width: 100%;
+    text-align: center;
+}
+
+.calculadora-avaliacoes input:hover {
+    border: none;
+}
+
+.calculadora-avaliacoes input::-webkit-outer-spin-button,
+.calculadora-avaliacoes input::-webkit-inner-spin-button {
+    appearance: none;
+}
+
+#calculadora-calcular {
+    font-size: 1.3rem;
+    font-weight: 400;
+    background-color: var(--cor-verde);
+    color: #f8fafc;
+    border-radius: 0.3rem;
+}
+
+#calculadora-calcular:hover {
+    cursor: pointer;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-weight: 400;
+}
+
+#info {
+    margin-top: 1.3rem;
+    padding: 2rem;
+    box-shadow: rgba(174, 173, 173, 0.2) 0px 7px 29px 0px;
+    background-color: #3f3f46;
+    border-radius: 0.3rem;
+}
+
+.info-escondida {
+    display: none;
+}
+
+#valor-csat{
+    font-size: 1.4rem;
+    font-weight: 400;
+    align-items: center;
+}
+
+.alerta-positivo {
+    color: var(--cor-verde);
+}
+
+.alerta-atencao {
+    color: var(--cor-amarela);
+}
+
+.alerta-negativo {
+    color: var(--cor-vermelho);
+}
+
+#rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    color: #f8fafc;
+    padding: 1rem;
+    border-top: 1px solid #3f3f46;
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 1200px) {                                
+    #container {
+        margin-top: 2rem;
+        width: 100%;
+        height: 100%; 
+    }
+
+    #termometro {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {                                
+    #container {
+        margin-top: 2rem;
+        width: 100%;
+        height: 100%; 
+    }
+
+    #termometro {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    #container {
+        width: 100%;
+        height: 100%; 
+    }
+
+    #form {
+        width: 100%;
+    }
+
+    #termometro {
+        display: none;
+    }
+
+    #calculadora {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .titulo {
+        font-size: 1rem;
+    }
+
+    .calculadora-avaliacoes {
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .calculadora-avaliacoes span {
+        display: none;
+    }
+
+    .calculadora-avaliacoes input:focus {
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
+
+    #info {
+        margin-top: 1.3rem;
+        padding: 1rem;
+        font-size: 0.5rem;
+    }
+
+    #rodape {
+        font-size: 0.6rem;
+    }
+}
